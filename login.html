@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5ebe0; /* Light beige */
+            color: #4a3f35; /* Dark coffee brown */
+        }
+
+        header {
+            background: linear-gradient(90deg, #a68a75, #a68a75);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-direction: row-reverse; /* تغيير اتجاه العناصر ليبدأ من اليمين */
+            direction: rtl; /* ضبط النصوص لدعم اللغة العربية */
+            
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px;
+            margin-right: 15px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a i {
+            margin-left: 8px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .auth-buttons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 5px 15px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .auth-buttons a i {
+            margin-left: 8px;
+        }
+
+        .auth-buttons a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+
+
+        .container {
+    display: flex;
+    align-items: flex-start; /* تغيير التمركز العمودي إلى الأعلى */
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    margin-top: 20px; /* ضبط الهامش العلوي */
+}
+
+
+        .login-card {
+            background-color: #fff8f0; /* Creamy white */
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .login-card h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #4a3f35;
+        }
+
+        .login-card p {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            color: #7f6e64;
+        }
+
+        .login-card a {
+            color: #a67b5b; /* Medium coffee brown */
+            text-decoration: none;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #d1c2b2; /* Light coffee border */
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .login-card .btn {
+            width: 100%;
+            padding: 0.9rem;
+            background-color: #8b5e34; /* Rich coffee brown */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-card .btn:hover {
+            background-color: #6e4626; /* Darker coffee brown */
+        }
+
+        .login-card .social-login {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+
+        .login-card .social-login button {
+            width: 48%;
+            padding: 0.9rem;
+            border: 1px solid #d1c2b2;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-card .social-login .google {
+            background-color: #db4437;
+            color: white;
+        }
+
+        .login-card .social-login .facebook {
+            background-color: #4267B2;
+            color: white;
+        }
+
+        .side-logo {
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side-logo img {
+            width: 220px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .side-logo {
+                margin-left: 0;
+            }
+
+            .side-logo img {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="log.png" alt="شعار زمرة">
+            <h1></h1>
+        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i>الرئيسية</a>
+        <!-- <a href="#"><i class="fas fa-star"></i>التقييمات</a> -->
+        <a href="offwhite.html"><i class="fas fa-coffee"></i>الكافيهات</a>
+        <a href="tourist.html"><i class="fas fa-landmark"></i>الأماكن السياحية</a>
+        <a href="restaurants.html"><i class="fas fa-utensils"></i>المطاعم</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i>تسجيل الدخول</a>
+            <a href="singup.html"><i class="fas fa-user-plus"></i>إنشاء حساب</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="login-card">
+                <h1>Login</h1>
+                <p>Don't have an account yet? <a href="#">Sign up</a></p>
+                <form>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label style="display: flex; align-items: center;">
+                            <input type="checkbox" style="margin-right: 5px;"> Remember me
+                        </label>
+                        <a href="#" style="color: #a67b5b;">Forgot Password?</a>
+                    </div>
+                    <button class="btn" type="submit">LOGIN</button>
+                </form>
+                <p style="text-align: center; margin: 1.5rem 0;">Or login with</p>
+                <div class="social-login">
+                    <button class="google">Google</button>
+                    <button class="facebook">Facebook</button>
+                </div>
+            </div>
+            <div class="side-logo">
+                <img src="log.png" alt="Ikseer Al-Bun Logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

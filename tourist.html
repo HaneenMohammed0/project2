@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زمرة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E6E6DC;
+            color: #333;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #edd4d7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+        header .logo span {
+            font-size: 24px;
+            font-weight: bold;
+         
+            color: #FFA500
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #3a2b0d;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a:hover {
+            color: #e6470d;
+        }
+
+
+/* /////////           section1                      */
+
+#section1 {
+            margin-top: 150px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 140px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #section1 .header {
+            display: flex;
+            justify-content: flex-start; /* Aligning content to the start (left in rtl) */
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        #section1 .header img {
+            width: 120px;
+            height: auto;
+            margin-left: 20px;
+            margin-right: 15px; /* Adjusted margin to give space between logo and text */
+        }
+        #section1 .header h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #6a4b3c;
+        }
+        #section1 .description {
+            font-size: 18px;
+            margin: 20px 0;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
+        }
+        #section1 .info-section {
+            text-align: right;
+            margin-top: 20px;
+        }
+        #section1 .info-section h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #6a4b3c;
+        }
+        #section1 .info-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        #section1 .info-section ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            position: relative;
+            padding-right: 30px;
+        }
+        #section1 .info-section ul li::before {
+            content: '\2022';
+            position: absolute;
+            right: 10px;
+            color: #6a4b3c;
+        }
+        #section1 .info-section p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        #section1 .map-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        #section1  .map-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        #section1  .map {
+            width: 350px;
+            height: 250px;
+            margin: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #section1 .map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #section1 .comment-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        #section1 .comment-section button {
+            background-color: #6a4b3c;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #section1 .comment-section button:hover {
+            background-color: #856352;
+        }
+
+
+
+
+        /* /////////           section2                      */
+
+
+        #section2 {
+
+            margin-top: 150px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 140px auto;
+            padding: 20px;
+            background-color: #fcfce6;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            /* margin-left: 15%;
+            padding: 40px; */
+        }
+
+        #section2 .review {
+            background-color: #E6E6DC;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-direction: row-reverse;
+        }
+
+        #section2 .review img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #section2 .review-content {
+            flex: 1;
+            text-align: center;
+        }
+
+        #section2 .review-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        #section2 .review-stars {
+            color: #ffcc00;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #section2 .review-text {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        #section2  .highlight {
+            border: 2px solid #a084e1;
+            padding: 20px;
+        }
+
+
+
+        /* /////////           section3                     */
+
+
+        #section3 {
+            margin-top: 150px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 140px auto;
+            padding: 20px;
+            background-color: #fcfce6;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+ 
+
+        #section3 .review-box {
+        
+
+
+            background-color: #fff;
+            width: 90%; /* تكبير العرض النسبي للحاوية */
+            padding: 40px; /* زيادة المساحة الداخلية */
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* زيادة الحد الأقصى للعرض */
+            margin: 50px auto;
+            text-align: center;
+
+        }
+
+        #section3 .review-box .add-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border: 2px dashed #bbb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #section3  .review-box .add-image:hover {
+            background-color: #f1e7e7;
+        }
+
+        #section3 .review-box .add-image span {
+            font-size: 16px;
+            color: #777;
+        }
+
+        #section3 .review-box .stars {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        #section3  .review-box .stars i {
+            font-size: 28px;
+            color: #ffc107;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        #section3 .review-box .stars i:hover {
+            transform: scale(1.2);
+        }
+
+        #section3  .review-box .comment {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+
+        #section3  .review-box button {
+            padding: 12px 35px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #b04a4a;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #section3 .review-box button:hover {
+            background-color: #8c3838;
+        }
+
+
+
+     /* /////////           section4                    */
+
+
+     #section4 {
+    margin-top: 150px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 140px auto;
+    padding: 20px;
+    background-color: #fcfce6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    direction: ltr; /* تغيير الاتجاه من اليسار إلى اليمين */
+    text-align: left; /* ضبط النصوص لمحاذاة اليسار */
+  
+   
+    justify-content: flex-start; /* محاذاة العناصر إلى اليسار */
+    gap: 20px; /* إضافة تباعد بين العناصر */
+}
+
+     /* #section4 {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        } */
+
+        #section4 .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        #section4  .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+        }
+
+        #section4 .profile-info {
+            flex: 1;
+        }
+
+        #section4 .profile-info h1 {
+            font-size: 24px;
+            margin: 0 0 15px;
+        }
+
+        #section4 .profile-stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+
+        #section4 .profile-stats div {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #section4 .profile-stats div span {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #section4  .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        #section4 .buttons button {
+            padding: 8px 20px;
+            border: none;
+            background-color: #4d4d33;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #section4 .buttons button:hover {
+            background-color: #393923;
+        }
+
+        #section4  .review-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #section4  .review-button button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4d4d33;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 120px;
+        }
+
+        #section4 .review-button button:hover {
+            background-color: #393923;
+        }
+
+        #section4   .review {
+            background-color: #D9D9D9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        #section4   .review img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #section4   .review-content {
+            flex: 1;
+        }
+
+        #section4 .review-content h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+
+        #section4  .review-content p {
+            line-height: 1.6;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        #section4  .stars {
+            color: #ffd700;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+
+
+
+
+
+
+
+
+
+     /* /////////           section5                     */
+
+
+     #section5 {
+            margin-top: 150px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 140px auto;
+            padding: 20px;
+            background-color: #fcfce6;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+           
+             margin-bottom: 120px;
+        }
+
+
+
+
+ 
+     
+
+        #section5 .search-box {
+            margin: 20px auto;
+            max-width: 600px;
+            position: relative;
+        }
+
+        #section5 .search-box input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #D9D9D9;
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #section5  .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #section5  .help-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        #section5 .help-item {
+            background-color: #D9D9D9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        #section5  .help-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        #section5 .help-item i {
+            font-size: 40px;
+            color: #4a734a;
+            margin-bottom: 10px;
+        }
+
+        #section5  .help-item p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #section5 .help-item.active {
+            border: 2px solid #4a90e2;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="log.png" alt="Logo">
+            <span></span>
+        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+            <!-- <a href="#"><i class="fas fa-star"></i> التقييمات</a> -->
+            <a href="offwhite.html"><i class="fas fa-coffee"></i>الكافيهات</a>
+        <a href="tourist.html"><i class="fas fa-landmark"></i>الأماكن السياحية</a>
+        <a href="restaurants.html"><i class="fas fa-utensils"></i>المطاعم</a>
+        </nav>
+        <div class="auth-buttons">
+            <!-- <a href="login.html">تسجيل الدخول</a>
+            <a href="signup.html">إنشاء حساب</a> -->
+        </div>
+    </header>
+
+    
+
+    <!--   section1         -->
+
+
+    <div class="container" id="section1">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="image/15.jpg" alt="جسر برج المملكة المعلق  ">
+            <h1> جسر برج المملكة المعلق</h1>
+        </div>
+    
+        <!-- Description Section -->
+        <p class="description">
+            على ارتفاع 300م، تنجذب عيناك نحو إطلالة بانورامية تكشف جمال مدينة الرياض خلال ألواح زجاجيّة عالية الأمان، تتيح لك الاستمتاع بمنظر السماء الداكنة المزيّنة بالنجوم المتلألئة وتأمّل امتداد الأضواء الذهبية في طرقات الرياض ومبانيها على جسر برج المملكة المعلّق، أو يمكنك الوقوف والتقاط صور شخصية بديعة يظهر فيها سحر المدينة خلفك أثناء النهار في يوم صافٍ.
+        </p>
+    
+        <!-- Map Section -->
+        <div class="map-section">
+            <h3>الموقع</h3>
+            <div class="map">
+                <img src="image/25.jpg" alt="خريطة الموقع">
+            </div>
+        </div>
+    
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2>معلومات المكان:</h2>
+            <ul>
+                <li>الفئة العمرية : مناسب لجميع الفئة العمرية</li>
+                <li>رسوم الدخول :</li>
+               <li>تذكرة الدخول بـ 69 ريالًا للبالغين، وبـ 23 ريالًا للأطفال دون سن 10 سنوات.</li>
+               <!-- <li>وقت الدخول : يوميًا:  12:00 مساءإلى10:15 مساء</li> -->
+            </ul>
+            <p><strong>وقت الدخول:</strong>  12:00 مساءإلى10:15 مساء</p>
+        </div>
+    
+        <!-- Comment Section -->
+        <div class="comment-section">
+            <button>إضافة تعليق</button>
+        </div>
+    </div>
+    
+
+
+  <!--   section2         -->
+
+
+  <div class="main-content" id="section2">
+    <div class="review">
+        <img src="image/102.jpg" alt="إكسير البن">
+        <div class="review-content">
+            <h3 class="review-title"> فيا الرياض</h3>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">المكان رايق وهادي ويستاهل انك تروح وتتمشى فيه دخول السيارة ب50﷼ لاكن اذا شريت من داخل تعتبر مجانيه</p>
+        </div>
+    </div>
+
+    <div class="review highlight">
+        <img src="image/103.jpg" alt="خطوة جمل">
+        <div class="review-content">
+            <h3 class="review-title"> جسر برج المملكة المعلق</h3>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">من أين يمكنني الدخول للبرج ؟ من الفندق ؟ أو مركز التسوق ؟</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!--   section3         -->
+
+
+  <div class="main-content" id="section3">
+    
+
+    <div class="review-box">
+        <div class="add-image">
+            <span>إضافة صورة</span>
+        </div>
+
+        <div class="stars">
+            <i>&#9733;</i>
+            <i>&#9733;</i>
+            <i>&#9733;</i>
+            <i>&#9733;</i>
+            <i>&#9733;</i>
+        </div>
+
+        <textarea class="comment" rows="5" placeholder="إضافة تعليق..."></textarea>
+
+        <button>إرسال التقييم</button>
+    </div>
+</div>
+
+
+
+
+
+
+ <!--   section4         -->
+
+
+
+
+ <div class="container" id="section4">
+    <div class="profile">
+        <div style="text-align: center;">
+            <img src="image/30.jpg" alt="Profile Picture">
+            <div class="review-button">
+                <button>Your Review</button>
+            </div>
+        </div>
+        <div class="profile-info">
+            <h1>Deema</h1>
+            <div class="profile-stats">
+                <div>
+                    <span>1</span>
+                    Comments
+                </div>
+                <div>
+                    <span>1</span>
+                    Photos
+                </div>
+                <div>
+                    <span>2</span>
+                    Favorites
+                </div>
+            </div>
+            <div class="buttons">
+                <button>Support</button>
+                <button>Edit Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="review">
+        <img src="image/27.jpg" alt="Cafe Picture">
+        <div class="review-content">
+            <h2>OZK Coffee</h2>
+            <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+            <p>المكان جميل وهادي يناسب للمذاكرة والقهوة مرا طعمة 
+                الموظفين بقمة الاحترام. </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <!--   section5        -->
+ 
+
+ 
+  <div class="main-content" id="section5">
+       
+
+    <h2 class="section-title">كيف نقدر نساعدك؟</h2>
+
+    <div class="search-box">
+        <input type="text" placeholder="ابحث">
+    </div>
+
+    <div class="help-container">
+        <div class="help-item">
+            <i>&#10067;</i>
+            <p>الأسئلة الشائعة</p>
+        </div>
+
+        <div class="help-item">
+            <i>&#128274;</i>
+            <p>الخصوصية</p>
+        </div>
+
+        <div class="help-item">
+            <i>&#9742;</i>
+            <p>اتصل بنا</p>
+        </div>
+
+        <div class="help-item active">
+            <i>&#128221;</i>
+            <p>الشروط و الأحكام</p>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
